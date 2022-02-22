@@ -6,9 +6,6 @@ import React from 'react';
 function Task(props) {
     // define a wrapping callback method here to execute the callback function given from props
     // add this an onClick to the <li>
-    const handleClick = () => {
-        props.clickCallback(props.task.id)
-    }
 
     let className = '';
     if (props.task.complete) { // if task is completed, add a strike styling
@@ -16,7 +13,7 @@ function Task(props) {
     }
 
     return (
-        <li className={className} onClick={handleClick} >
+        <li className={className} >
             {props.task.description}
         </li>
     )
@@ -27,13 +24,11 @@ function Task(props) {
 // whatToDoWhenClicked: a callback function that toggles a task's complete property, given from <App />
 export default function TaskList(props) {
     // define a map() function that creates a list of <Task /> elements
-    let taskComponents = props.tasks.map((eachTask) => {
-        return <Task key={eachTask.id} task={eachTask} clickCallback={props.whatToDoWhenClicked} />
-    })
+    // save that in a variable then render the list using an inline expression
 
     return (
             <ol>
-                {taskComponents}
+                
             </ol>
         )
     }

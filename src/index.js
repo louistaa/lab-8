@@ -14,5 +14,5 @@ const SAMPLE_TASKS = [
   {id:3, description:'Get some sleep', complete:false} 
 ];
 
-// to do: pass in the data as a prop, calling it initialTasks
-ReactDOM.render(<App initialTasks={SAMPLE_TASKS} />,document.getElementById('root'));
+// pass in the data as a prop, calling it initialTasks
+ReactDOM.render(<App />,document.getElementById('root'));
