@@ -15,4 +15,4 @@ const SAMPLE_TASKS = [
 ];
 
 // pass in the data as a prop, calling it initialTasks
-ReactDOM.render(<App />,document.getElementById('root'));
+ReactDOM.render(<App initialTasks={SAMPLE_TASKS} />,document.getElementById('root'));
